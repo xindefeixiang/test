@@ -1,0 +1,661 @@
+[2019-02-12 07:00:28] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) {"exception":"[object] (Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(64): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(43): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(913): call_user_func(Object(Closure))
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(938): Illuminate\\Database\\Connection->getPdo()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#27 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2019-02-12 07:00:28] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#17 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2019-02-12 07:01:56] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) {"exception":"[object] (Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(64): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(43): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(913): call_user_func(Object(Closure))
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(938): Illuminate\\Database\\Connection->getPdo()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#27 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2019-02-12 07:01:56] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#17 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2019-02-12 07:02:24] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) {"exception":"[object] (Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(64): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(43): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(913): call_user_func(Object(Closure))
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(938): Illuminate\\Database\\Connection->getPdo()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#27 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 {main}
+"} 
+[2019-02-12 07:02:24] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:27)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(154): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(544): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(96): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(62): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#17 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2019-02-12 07:02:56] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:119, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:117)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 F:\\workpractice\\one\\practice\\laravel55\\database\\migrations\\2014_10_12_000000_create_users_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateUsersTable->up()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('F:\\\\workpractice...', 1, false)
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#23 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2019-02-12 07:04:41] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate utf8mb4_unicode_ci) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate utf8mb4_unicode_ci) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:119, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:117)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('create table `u...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(86): Illuminate\\Database\\Connection->statement('create table `u...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 F:\\workpractice\\one\\practice\\laravel55\\database\\migrations\\2014_10_12_000000_create_users_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateUsersTable->up()
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(365): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('F:\\\\workpractice...', 1, false)
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(195): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\foryoufeng\\laravel-generator\\src\\Console\\InstallCommand.php(34): Illuminate\\Console\\Command->call('migrate')
+#23 [internal function]: Foryoufeng\\Generator\\Console\\InstallCommand->handle()
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Illuminate\\Container\\Container->call(Array)
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Command\\Command.php(264): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Foryoufeng\\Generator\\Console\\InstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2019-02-12 07:06:01] local.ERROR: Command "publish" is not defined.
+
+Did you mean this?
+    vendor:publish {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"publish\" is not defined.
+
+Did you mean this?
+    vendor:publish at F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php:596)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(205): Symfony\\Component\\Console\\Application->find('publish')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-02-14 10:13:40] local.ERROR: Command "migration" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migration\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php:596)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(205): Symfony\\Component\\Console\\Application->find('migration')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-02-14 12:07:46] local.ERROR: Parse error: syntax error, unexpected ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ')' at F:\\workpractice\\one\\practice\\laravel55\outes\\api.php:20)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(321): Illuminate\\Routing\\Router->loadRoutes('F:\\\\workpractice...')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(105): Illuminate\\Routing\\Router->group(Array, 'F:\\\\workpractice...')
+#2 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('F:\\\\workpractice...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#4 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(74): Illuminate\\Container\\Container->call(Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(33): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#11 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#12 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->call(Array)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(764): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 21)
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(765): array_walk(Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(213): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(293): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(117): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#25 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+"} 
+[2019-02-14 12:08:25] local.ERROR: Parse error: syntax error, unexpected ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ')' at F:\\workpractice\\one\\practice\\laravel55\outes\\api.php:20)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(321): Illuminate\\Routing\\Router->loadRoutes('F:\\\\workpractice...')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(105): Illuminate\\Routing\\Router->group(Array, 'F:\\\\workpractice...')
+#2 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('F:\\\\workpractice...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#4 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(74): Illuminate\\Container\\Container->call(Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(33): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#11 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#12 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->call(Array)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(764): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 21)
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(765): array_walk(Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(213): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(293): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(117): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#25 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+"} 
+[2019-02-14 12:08:41] local.ERROR: Parse error: syntax error, unexpected ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ')' at F:\\workpractice\\one\\practice\\laravel55\outes\\api.php:20)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(321): Illuminate\\Routing\\Router->loadRoutes('F:\\\\workpractice...')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(105): Illuminate\\Routing\\Router->group(Array, 'F:\\\\workpractice...')
+#2 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('F:\\\\workpractice...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#4 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(74): Illuminate\\Container\\Container->call(Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(33): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#11 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#12 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->call(Array)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(764): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 21)
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(765): array_walk(Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(213): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(293): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(117): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#25 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+"} 
+[2019-02-14 12:08:44] local.ERROR: Parse error: syntax error, unexpected ')' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ')' at F:\\workpractice\\one\\practice\\laravel55\outes\\api.php:20)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(321): Illuminate\\Routing\\Router->loadRoutes('F:\\\\workpractice...')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(105): Illuminate\\Routing\\Router->group(Array, 'F:\\\\workpractice...')
+#2 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('F:\\\\workpractice...')
+#3 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#4 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(74): Illuminate\\Container\\Container->call(Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(33): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#11 F:\\workpractice\\one\\practice\\laravel55\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#12 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->call(Array)
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(764): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 21)
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(765): array_walk(Array, Object(Closure))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(213): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(293): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(117): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#25 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+"} 
+[2019-02-14 12:42:26] local.ERROR: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'undefined' for column 'sex' at row 1 (SQL: insert into `users` (`mobile`, `nick_name`, `password`, `avatar`, `sex`, `open_id`, `province`, `city`, `union_id`) values (16621316528, 挥霍的人生, 123456, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIAHl2iaswiaYFjRcLPG8bichekjmKoZaLpNdM8o5g4icEyDOpdarOaM5AibGxtuMY2ozg8knrjic2BfBZQ/132, undefined, undefined, , , undefined)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'undefined' for column 'sex' at row 1 (SQL: insert into `users` (`mobile`, `nick_name`, `password`, `avatar`, `sex`, `open_id`, `province`, `city`, `union_id`) values (16621316528, 挥霍的人生, 123456, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIAHl2iaswiaYFjRcLPG8bichekjmKoZaLpNdM8o5g4icEyDOpdarOaM5AibGxtuMY2ozg8knrjic2BfBZQ/132, undefined, undefined, , , undefined)) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'undefined' for column 'sex' at row 1 at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:119, PDOException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'undefined' for column 'sex' at row 1 at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:117)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1270): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1419): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\app\\Model\\item\\User.php(11): Illuminate\\Database\\Eloquent\\Model->__call('insert', Array)
+#7 F:\\workpractice\\one\\practice\\laravel55\\app\\Http\\Controllers\\Item\\LoginController.php(20): App\\Model\\item\\User->adduser(Array)
+#8 [internal function]: App\\Http\\Controllers\\Item\\LoginController->login(Object(Illuminate\\Http\\Request))
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('login', Array)
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(204): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Item\\LoginController), 'login')
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(161): Illuminate\\Routing\\Route->runController()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(610): Illuminate\\Routing\\Route->run()
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(571): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(549): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 F:\\workpractice\\one\\practice\\laravel55\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 {main}
+"} 
+[2019-02-14 12:53:51] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'province' cannot be null (SQL: insert into `users` (`mobile`, `nick_name`, `password`, `avatar`, `sex`, `open_id`, `province`, `city`, `union_id`) values (16621316528, 挥霍的人生, 123456, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIAHl2iaswiaYFjRcLPG8bichekjmKoZaLpNdM8o5g4icEyDOpdarOaM5AibGxtuMY2ozg8knrjic2BfBZQ/132, 0, oTf9t1dN9ofsGWmExCBAYCboiGyA, , , undefined)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'province' cannot be null (SQL: insert into `users` (`mobile`, `nick_name`, `password`, `avatar`, `sex`, `open_id`, `province`, `city`, `union_id`) values (16621316528, 挥霍的人生, 123456, https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIAHl2iaswiaYFjRcLPG8bichekjmKoZaLpNdM8o5g4icEyDOpdarOaM5AibGxtuMY2ozg8knrjic2BfBZQ/132, 0, oTf9t1dN9ofsGWmExCBAYCboiGyA, , , undefined)) at F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'province' cannot be null at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:119, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'province' cannot be null at F:\\workpractice\\one\\practice\\laravel55\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:117)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2118): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#4 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1270): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1419): Illuminate\\Database\\Eloquent\\Builder->__call('insert', Array)
+#6 F:\\workpractice\\one\\practice\\laravel55\\app\\Model\\item\\User.php(11): Illuminate\\Database\\Eloquent\\Model->__call('insert', Array)
+#7 F:\\workpractice\\one\\practice\\laravel55\\app\\Http\\Controllers\\Item\\LoginController.php(20): App\\Model\\item\\User->adduser(Array)
+#8 [internal function]: App\\Http\\Controllers\\Item\\LoginController->login(Object(Illuminate\\Http\\Request))
+#9 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#10 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('login', Array)
+#11 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(204): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Item\\LoginController), 'login')
+#12 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(161): Illuminate\\Routing\\Route->runController()
+#13 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(610): Illuminate\\Routing\\Route->run()
+#14 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#20 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(571): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#24 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(549): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#25 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#26 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#27 F:\\workpractice\\one\\practice\\laravel55\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#40 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#43 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 F:\\workpractice\\one\\practice\\laravel55\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 {main}
+"} 
+[2019-02-14 13:27:32] local.ERROR: Class 'Carbon\Laravel\ServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'Carbon\\Laravel\\ServiceProvider' not found at F:\\workpractice\\one\\practice\\laravel55\\vendor\\flaravel\\sms\\src\\FlaravelSmsServiceProvider.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:39:49] local.ERROR: Class 'Carbon\Laravel\ServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'Carbon\\Laravel\\ServiceProvider' not found at F:\\workpractice\\one\\practice\\laravel55\\vendor\\flaravel\\sms\\src\\FlaravelSmsServiceProvider.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:43:14] local.ERROR: Command "make:server" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:bindings
+    make:command
+    make:controller
+    make:criteria
+    make:entity
+    make:event
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:presenter
+    make:provider
+    make:repository
+    make:request
+    make:resource
+    make:rest-controller
+    make:rule
+    make:seeder
+    make:test
+    make:transformer
+    make:validator {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:server\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:bindings
+    make:command
+    make:controller
+    make:criteria
+    make:entity
+    make:event
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:presenter
+    make:provider
+    make:repository
+    make:request
+    make:resource
+    make:rest-controller
+    make:rule
+    make:seeder
+    make:test
+    make:transformer
+    make:validator at F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php:596)
+[stacktrace]
+#0 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(205): Symfony\\Component\\Console\\Application->find('make:server')
+#1 F:\\workpractice\\one\\practice\\laravel55\\vendor\\symfony\\console\\Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(82): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 F:\\workpractice\\one\\practice\\laravel55\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 F:\\workpractice\\one\\practice\\laravel55\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
