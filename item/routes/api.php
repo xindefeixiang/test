@@ -30,4 +30,7 @@ Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
 
+
 });
+Route::get('worklist', 'hot\WorklistController@GetWork');
+Route::get('positionlist', 'hot\PositionController@GetWork');
