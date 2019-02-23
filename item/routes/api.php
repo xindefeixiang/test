@@ -31,3 +31,23 @@ Route::post('logout', 'Auth\LoginController@logout');
 Route::group(['middleware' => 'auth:api'], function() {
 
 });
+
+// App\Http\Controllers\Admin\AdminController，命名空间为Admin
+Route::namespace('Admin')->group(function() {
+    //ResumeController
+    Route::post('resume/resume_add', 'ResumeController@resume_add');
+    Route::any('resume/resume_show', 'ResumeController@resume_show');
+    Route::get('resume/resume_more_del', 'ResumeController@resume_more_del');
+    Route::post('resume/interview_invit', 'ResumeController@interview_invit');
+
+    //EnterpriseController
+    Route::post('enterprise/enterprise_add', 'EnterpriseController@enterprise_add');
+    Route::any('enterprise/enterprise_show', 'EnterpriseController@enterprise_show');
+
+    //PositionController
+    Route::post('position/position_add', 'PositionController@position_add');
+    Route::get('position/position_show', 'PositionController@position_show');
+    Route::get('position/position_del', 'PositionController@position_del');
+    Route::get('position/position_rename', 'PositionController@position_rename');
+
+});
