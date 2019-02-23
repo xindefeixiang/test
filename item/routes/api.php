@@ -31,3 +31,19 @@ Route::post('logout', 'Auth\LoginController@logout');
 Route::group(['middleware' => 'auth:api'], function() {
 
 });
+
+//热门企业数据接口
+Route::get('enterprise/show', 'enterprise\enterpriseController@show');
+Route::get('enterprise/shows', 'enterprise\enterpriseController@shows');
+//热门行业业数据接口
+Route::get('industry/show', 'industry\industryController@show');
+Route::get('industry/shows', 'industry\industryController@shows');
+//报名
+Route::post('signup/add', 'signup\SignupController@add');
+//轮播图
+Route::get('imgs/show', 'imgs\ImgsController@show');
+//平台活动
+Route::get('activity/show', 'activity\ActivityController@show');
+//专家讲堂
+Route::get('experts/show', 'experts\ExpertsController@show');
+Route::post('experts/find', 'experts\ExpertsController@find');
