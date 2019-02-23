@@ -30,7 +30,7 @@ Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
 
-<<<<<<< HEAD
+
 });
 
 //热门企业数据接口
@@ -48,14 +48,13 @@ Route::get('activity/show', 'activity\ActivityController@show');
 //专家讲堂
 Route::get('experts/show', 'experts\ExpertsController@show');
 Route::post('experts/find', 'experts\ExpertsController@find');
-=======
-<<<<<<< HEAD
 
-});
+
+
 Route::get('worklist', 'hot\WorklistController@GetWork');
 Route::get('positionlist', 'hot\PositionController@GetWork');
-=======
-});
+
+
 
 // App\Http\Controllers\Admin\AdminController，命名空间为Admin
 Route::namespace('Admin')->group(function() {
@@ -76,5 +75,3 @@ Route::namespace('Admin')->group(function() {
     Route::get('position/position_rename', 'PositionController@position_rename');
 
 });
->>>>>>> b72ef6a5b415e6e2de54e3ec2f28213d7fd31dbd
->>>>>>> a3105741e9d1e3a2a9bb9387e510d371d53e4940
