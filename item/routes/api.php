@@ -23,8 +23,16 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::any('user/update',['uses' => 'UserController@update']);
 
 });
+//和志恒
 Route::namespace('Home')->group(function () {
-    Route::any('program/show', 'ProgramController@show');
+    //热门企业接口
+    Route::any('program/industry', 'ProgramController@industry');
+    //全部企业接口
+    Route::any('program/industryall','ProgramController@industryall');
+    //公司详情接口
+    Route::any('program/details','ProgramController@details');
+    //评论接口
+    Route::any('program/comments','ProgramController@comments');
 });
 
 //注册接口

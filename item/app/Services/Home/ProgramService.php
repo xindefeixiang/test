@@ -5,6 +5,7 @@ use App\Model\Recruit\Content;
 class ProgramService
 {
     //写完逻辑代码 调用数据库
+
     public function industry(){
         $data = Recruit::get()->where('is_default',1)->toArray();
         return $data;
@@ -17,6 +18,11 @@ class ProgramService
 
     public function detas($id){
         $data = Content::get()->where('enterprise_id',$id)->toArray();
+        return $data;
+    }
+
+    public function comments(){
+
     }
 
 }

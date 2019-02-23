@@ -11,7 +11,7 @@ class ProgramController extends BaseApiController{
         //依赖注入service
         $this->service=$service;
     }
-    //企业
+    //热门企业
     public function industry(){
         $data = $this->service->industry();
         print_r($data);
