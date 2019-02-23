@@ -30,6 +30,10 @@ Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07add8012834ba5cfebfde2553ece9ce1896ffaf
 
 });
 
@@ -74,4 +78,9 @@ Route::namespace('Admin')->group(function() {
     Route::get('position/position_del', 'PositionController@position_del');
     Route::get('position/position_rename', 'PositionController@position_rename');
 
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> 07add8012834ba5cfebfde2553ece9ce1896ffaf
