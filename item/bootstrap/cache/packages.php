@@ -27,4 +27,11 @@
       0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
+  'zgldh/qiniu-laravel-storage' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'zgldh\\QiniuStorage\\QiniuFilesystemServiceProvider',
+    ),
+  ),
 );
