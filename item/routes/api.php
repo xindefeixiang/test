@@ -21,7 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::any('user/add', ['uses' => 'UserController@add']);
     Route::any('user/update',['uses' => 'UserController@update']);
+
 });
+Route::namespace('Home')->group(function () {
+    Route::any('program/show', 'ProgramController@show');
+});
+
 //注册接口
 Route::post('register', 'Auth\RegisterController@register');
 //登录接口
