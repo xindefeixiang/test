@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 // 个人
 Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::any('user/add', ['uses' => 'UserController@add']);
@@ -42,14 +43,6 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
-
-<<<<<<< HEAD
-});
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 07add8012834ba5cfebfde2553ece9ce1896ffaf
 
 });
 
@@ -94,10 +87,5 @@ Route::namespace('Admin')->group(function() {
     Route::get('position/position_del', 'PositionController@position_del');
     Route::get('position/position_rename', 'PositionController@position_rename');
 
-<<<<<<< HEAD
-});
-=======
 });
 
->>>>>>> 07add8012834ba5cfebfde2553ece9ce1896ffaf
->>>>>>> c52c7da71aaf8fcce847013761c7c975fb3167b1

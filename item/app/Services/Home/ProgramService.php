@@ -2,11 +2,13 @@
 namespace App\Services\Home;
 use App\Model\Recruit\Recruit;
 use App\Model\Recruit\Content;
+use http\Env\Request;
+
 class ProgramService
 {
     //写完逻辑代码 调用数据库
 
-    public function industry(){
+    public function industry(Request $request){
         $data = Recruit::get()->where('is_default',1)->toArray();
         return $data;
     }
@@ -16,13 +18,13 @@ class ProgramService
         return $data;
     }
 
-    public function detas($id){
+    public function details($id){
         $data = Content::get()->where('enterprise_id',$id)->toArray();
         return $data;
     }
 
-    public function comments(){
-
+    public function comments($arr){
+        return Content::insertGetId($arr);
     }
 
 }
