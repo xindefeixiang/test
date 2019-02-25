@@ -44,10 +44,7 @@ Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 5168e2f0cf601bf841c3078fec7c868c4223d83b
 });
 
 
@@ -69,10 +66,14 @@ Route::post('experts/find', 'experts\ExpertsController@find');
 
 
 
-Route::get('worklist', 'hot\WorklistController@GetWork');
-Route::get('positionlist', 'hot\PositionController@GetWork');
 
 
+Route::namespace('hot')->group(function() {
+    Route::get('worklist', 'WorklistController@GetWork');
+    Route::get('positionlist', 'PositionController@GetWork');
+    Route::get('getonelist', 'PositionController@positionintro');
+    Route::get('arealist', 'PositionController@arealist');
+});
 
 // App\Http\Controllers\Admin\AdminController，命名空间为Admin
 Route::namespace('Admin')->group(function() {
@@ -104,10 +105,10 @@ Route::namespace('Admin')->group(function() {
     Route::get('position/position_rename', 'PositionController@position_rename');
     Route::get('enterprise/register', 'EnterpriseController@register');
 
-<<<<<<< HEAD
+
 });
 
-=======
+
 
     $api = app('Dingo\Api\Routing\Router');
     // 使用门面注册路由
@@ -117,5 +118,5 @@ Route::namespace('Admin')->group(function() {
 //            $api->resource('enterprise/register','EnterpriseController');
         });
     });
-});
->>>>>>> 5168e2f0cf601bf841c3078fec7c868c4223d83b
+
+

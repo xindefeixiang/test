@@ -1,5 +1,5 @@
 <?php
-namespace app\Http\Model;
+namespace app\Model;
 use Illuminate\Database\Eloquent\Model;
 /**
  * model基类
