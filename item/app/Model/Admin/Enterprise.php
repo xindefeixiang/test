@@ -10,7 +10,7 @@ namespace App\Model\Admin;
 
 
 use Illuminate\Database\Eloquent\Model;
-
+use Tymon\JWTAuth\Contracts\JWTSubject;
 class Enterprise extends Model
 {
 
@@ -19,4 +19,14 @@ class Enterprise extends Model
     //在模型类中设置$timestamps属性为false：
     public $timestamps = false;
 
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 }

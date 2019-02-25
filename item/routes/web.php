@@ -14,8 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-<<<<<<< HEAD
 Route::get('industry/show', 'industry\IndustryController@show');
 
 Route::post('signup/add', 'signup\SignupController@add');
@@ -27,8 +25,7 @@ Route::get('activity/show', 'activity\ActivityController@show');
 Route::get('experts/show', 'experts\ExpertsController@show');
 
 Route::post('experts/find', 'experts\ExpertsController@find');
-=======
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> a3105741e9d1e3a2a9bb9387e510d371d53e4940

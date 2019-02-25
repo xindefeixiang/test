@@ -12,6 +12,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Services\Admin\ResumeServer;
+use Illuminate\Support\Facades\Validator;
 class ResumeController extends Controller
 {
     //定义一个受保护的全局变量
@@ -49,10 +50,23 @@ class ResumeController extends Controller
          }
     }
 
+    //面试邀请字段的规则
+    public function invit_rules(){
+         return [
+             'offer_way'=>'required|integer|max:10',
+             'offer_place'=>'required|max:100',
+             'offer_time'=>'required|date_format:Y-m-d H:i:s',
+             'offer_tel'=>'required|max:10',
+             'offer_contact'=>'required|max:100',
+             'user_id'=>'required|integer|max:10'
+         ];
+    }
+
     //面试邀请  先做一下单个邀请
     public function interview_invit(Request $request){
-         if(empty($request->post())){
-             return ['status' => 'fail','code' => 401,'error' => '数据为空'];
+         $validator = Validator::make($request->post(),$this->invit_rules());
+         if($validator->fails()){
+             return $validator->errors()->all();
          }else{
              $data = $request->post();
              $res = $this->rs->interview_add($data);
