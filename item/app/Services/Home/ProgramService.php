@@ -8,7 +8,7 @@ class ProgramService
 {
     //写完逻辑代码 调用数据库
 
-    public function industry(Request $request){
+    public function industry(){
         $data = Recruit::get()->where('is_default',1)->toArray();
         return $data;
     }

@@ -44,7 +44,12 @@ Route::post('logout', 'Auth\LoginController@logout');
 //需要认证的接口
 Route::group(['middleware' => 'auth:api'], function() {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5168e2f0cf601bf841c3078fec7c868c4223d83b
 });
+
 
 //热门企业数据接口
 Route::get('enterprise/show', 'enterprise\enterpriseController@show');
@@ -72,20 +77,45 @@ Route::get('positionlist', 'hot\PositionController@GetWork');
 // App\Http\Controllers\Admin\AdminController，命名空间为Admin
 Route::namespace('Admin')->group(function() {
     //ResumeController
+    //简历添加
     Route::post('resume/resume_add', 'ResumeController@resume_add');
+    //简历展示
     Route::any('resume/resume_show', 'ResumeController@resume_show');
+    //删除简历
     Route::get('resume/resume_more_del', 'ResumeController@resume_more_del');
+    //邀请面试
     Route::post('resume/interview_invit', 'ResumeController@interview_invit');
 
     //EnterpriseController
+    //增加企业信息
     Route::post('enterprise/enterprise_add', 'EnterpriseController@enterprise_add');
+    //查询企业信息
     Route::any('enterprise/enterprise_show', 'EnterpriseController@enterprise_show');
+    Route::any('enterprise/get_tocken', 'EnterpriseController@get_tocken');
 
     //PositionController
+    //职位添加
     Route::post('position/position_add', 'PositionController@position_add');
+    //查询当前公司下面的职位
     Route::get('position/position_show', 'PositionController@position_show');
+    //删除职位
     Route::get('position/position_del', 'PositionController@position_del');
+    //职位名称重命名
     Route::get('position/position_rename', 'PositionController@position_rename');
+    Route::get('enterprise/register', 'EnterpriseController@register');
 
+<<<<<<< HEAD
 });
 
+=======
+
+    $api = app('Dingo\Api\Routing\Router');
+    // 使用门面注册路由
+    APIRoute::version('v1',function($api){
+        $api->group(['namespace'=>'App\Http\Controllers\Admin','middleware'=>'jwt.auth'],function($api){
+            $api->resource('enterprise/get_tocken','EnterpriseController');
+//            $api->resource('enterprise/register','EnterpriseController');
+        });
+    });
+});
+>>>>>>> 5168e2f0cf601bf841c3078fec7c868c4223d83b

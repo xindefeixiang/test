@@ -21,4 +21,9 @@ class EnterpriseServer
     public function show(){
         return Enterprise::get()->toArray();
     }
+
+    public function get_tocken(){
+        $enter = new Enterprise();
+        return $enter->getJWTIdentifier();
+    }
 }

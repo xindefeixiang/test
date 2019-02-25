@@ -12,7 +12,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Services\Admin\PositionServer;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class PositionController extends Controller
 {
     //定义一个全局变量
@@ -23,11 +23,31 @@ class PositionController extends Controller
          $this->position = $positionServer;
      }
 
+     //职位字段的规则
+    public function rules(){
+        return [
+            'job_name' => 'required|max:191',
+            'nature'=>'required|integer|max:10',
+            'address' => 'required|max:191',
+            'min'=>'required|max:191',
+            'max'=>'required|max:191',
+            'require'=>'required|integer|max:10',
+            'work_life'=>'required|integer|max:10',
+            'job_category'=>'required|max:191',
+            'industry_id'=>'required|integer|max:10',
+            'recruits_num'=>'required|max:191',
+            'description'=>'required|mimetypes:text',
+            'company_id'=>'required|integer|max:10',
+        ];
+    }
+
      //添加职位
     public function position_add(Request $request){
          $data = $request->post();
-         if(empty($data)){
-             return ['status' => 'fail','code' => 401,'error' => '数据为空'];
+         $validator = Validator::make($data,$this->rules());
+
+         if($validator->fails()){
+             return $validator->errors()->all();
          }else{
              $res = $this->position->position_add($data);
              if($res){
